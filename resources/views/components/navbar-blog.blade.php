@@ -6,12 +6,29 @@
             <div class="flex items-center justify-between h-16">
 
                 {{-- Logo --}}
-                <a href="/" class="flex items-center gap-2 group">
-                    <span
-                        class="text-emerald-400 text-xl font-black tracking-tight group-hover:text-emerald-300 transition-colors duration-200">
-                        mon<span class="text-white">X</span>info
-                    </span>
-                </a>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="flex items-center gap-2 group">
+                        <span
+                            class="text-emerald-400 text-xl font-black tracking-tight group-hover:text-emerald-300 transition-colors duration-200">
+                            mon<span class="text-white">X</span>info
+                        </span>
+                    </a>
+                    <div class="flex items-center">
+                        <!-- ICON MATAHARI (tampil saat LIGHT MODE) -->
+                        <svg id="icon-light" class="w-6 h-6 cursor-pointer hidden dark:block text-gray-200"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
+                        </svg>
+    
+                        <!-- ICON BULAN (tampil saat DARK MODE) -->
+                        <svg id="icon-dark" class="w-6 h-6 cursor-pointer dark:hidden text-gray-700"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z" />
+                        </svg>
+                    </div>
+                </div>
 
                 {{-- Desktop Menu --}}
                 <ul class="hidden md:flex items-center gap-1">

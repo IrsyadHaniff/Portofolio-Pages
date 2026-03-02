@@ -71,7 +71,7 @@
                         class="absolute left-0 mt-4 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-2"
                         style="display: none;">
                         {{-- blog route --}}
-                        <a href="{{ route('blog.index') }}"
+                        <a target="_blank" href="{{ route('blog.index') }}"
                             class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-500 dark:hover:text-blue-400 hover:pl-6 transition-all">
                             My Blog
                         </a>
