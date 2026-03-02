@@ -21,8 +21,8 @@
                     </svg>
 
                     <!-- ICON BULAN (tampil saat DARK MODE) -->
-                    <svg id="icon-dark" class="w-6 h-6 cursor-pointer dark:hidden text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24">
+                    <svg id="icon-dark" class="w-6 h-6 cursor-pointer dark:hidden text-gray-700"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z" />
                     </svg>
@@ -41,11 +41,13 @@
                 </div>
 
                 {{-- Regular Menu Items --}}
-                <a href="#about" class="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors">
+                <a href="#about"
+                    class="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors">
                     About Me
                 </a>
 
-                <a href="#portfolio" class="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors">
+                <a href="#portfolio"
+                    class="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors">
                     Portfolio
                 </a>
 
@@ -66,15 +68,18 @@
                         x-transition:leave="transition ease-in duration-150"
                         x-transition:leave-start="opacity-100 transform translate-y-0"
                         x-transition:leave-end="opacity-0 transform translate-y-2"
-                        class="absolute left-0 mt-4 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-2" style="display: none;">
-                        <a href="#"
+                        class="absolute left-0 mt-4 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl py-2"
+                        style="display: none;">
+                        {{-- blog route --}}
+                        <a href="{{ route('blog.index') }}"
                             class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-500 dark:hover:text-blue-400 hover:pl-6 transition-all">
                             My Blog
                         </a>
                     </div>
                 </div>
 
-                <a href="#contact" class="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors">
+                <a href="#contact"
+                    class="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors">
                     Contact
                 </a>
             </div>
@@ -89,12 +94,12 @@
 
             {{-- Mobile Hamburger Button --}}
             <button @click="open = !open" class="lg:hidden focus:outline-none">
-                <svg class="w-6 h-6 text-gray-700 dark:text-gray-200" :class="{ 'hidden': open }" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
+                <svg class="w-6 h-6 text-gray-700 dark:text-gray-200" :class="{ 'hidden': open }" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <svg class="w-6 h-6 text-gray-700 dark:text-gray-200" :class="{ 'hidden': !open }" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
+                <svg class="w-6 h-6 text-gray-700 dark:text-gray-200" :class="{ 'hidden': !open }" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
@@ -114,22 +119,14 @@
                 <button @click="mobileDropdown = !mobileDropdown"
                     class="w-full flex items-center justify-between px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">
                     <span>Home</span>
-                    <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': mobileDropdown }" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
                 </button>
-                <div x-show="mobileDropdown" class="bg-gray-50 dark:bg-gray-800 py-2" style="display: none;">
-                    <a href="#" class="block px-8 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Home One</a>
-                    <a href="#" class="block px-8 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Home Two</a>
-                </div>
             </div>
 
-            <a href="#about" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">About Me</a>
-            <a href="#portfolio" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">Portfolio</a>
-            <a href="#services" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">Services</a>
-            <a href="#testimonial"
-                class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">Testimonial</a>
+            <a href="#about"
+                class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">About
+                Me</a>
+            <a href="#portfolio"
+                class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">Portfolio</a>
 
             {{-- Mobile Blog Dropdown --}}
             <div x-data="{ mobileDropdown: false }" class="py-2">
@@ -142,15 +139,14 @@
                     </svg>
                 </button>
                 <div x-show="mobileDropdown" class="bg-gray-50 dark:bg-gray-800 py-2" style="display: none;">
-                    <a href="#" class="block px-8 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Standard Blog</a>
-                    <a href="#" class="block px-8 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Grid Blog</a>
-                    <a href="#" class="block px-8 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Blog List</a>
-                    <a href="#" class="block px-8 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Blog Right Sidebar</a>
-                    <a href="#" class="block px-8 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Blog Details</a>
+                    <a href="#"
+                        class="block px-8 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+                        My Blog</a>
                 </div>
             </div>
 
-            <a href="#contact" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">Contact</a>
+            <a href="#contact"
+                class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 font-medium">Contact</a>
 
             <div class="px-4 mt-4">
                 <a href="#contact"
