@@ -1,4 +1,4 @@
-<nav x-data="{ open: false, activeTag: 'terkini' }" class="w-full font-['Sora',sans-serif]">
+<nav x-data="{ open: false, activeTag: {{ request()->routeIs('blog.index') ? "'Terkini'" : "null" }} }" class="w-full font-['Sora',sans-serif]">
 
     {{-- ===== TOP BAR ===== --}}
     <div class="bg-zinc-950 border-b border-zinc-800">
