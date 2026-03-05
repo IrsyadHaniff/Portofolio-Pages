@@ -18,6 +18,11 @@ class BlogController extends Controller
         return view ('blog.about');
     }
 
+    public function post()
+    {
+        return view ('blog.post');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

@@ -27,7 +27,7 @@
                     <h2 class="section-title text-emerald-500 dark:text-white text-xl font-bold mb-6">Terkini</h2>
 
                     {{-- Featured Card --}}
-                    <a href="#">
+                    <a href="{{ route('blog.post') }}">
                         <div class="card-hover relative rounded-2xl overflow-hidden mb-5 cursor-pointer group">
                             <img src="https://picsum.photos/seed/tech1/800/420" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="featured-overlay absolute inset-0 flex flex-col justify-end p-5">
