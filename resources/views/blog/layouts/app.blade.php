@@ -11,7 +11,7 @@
     <title>@yield('title', 'monXinfo')</title>
 </head>
 
-<body class="select-none overflow-x-hidden">
+<body class="overflow-x-hidden">
 
     {{-- page loading --}}
     <x-page-loader />

@@ -7,7 +7,7 @@
 
                 {{-- Logo --}}
                 <div class="flex items-center space-x-4">
-                    <a href="/" class="flex items-center gap-2 group">
+                    <a href="{{ route('blog.index') }}" class="flex items-center gap-2 group">
                         <span
                             class="text-emerald-400 text-xl font-black tracking-tight group-hover:text-emerald-300 transition-colors duration-200">
                             mon<span class="text-white">X</span>info
