@@ -5,33 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $featured      = Post::latest()->first();
-        $subCards      = Post::latest()->skip(1)->take(2)->get();
-        $hotTopik      = Post::latest()->skip(3)->take(3)->get();
-        $beritaLainnya = Post::latest()->skip(6)->take(5)->get();
-
-        return view('blog.home', compact(
-            'featured',
-            'subCards',
-            'hotTopik',
-            'beritaLainnya',
-        ));
-    }
-    public function about()
-    {
-        return view('blog.about');
-    }
-
-    public function post()
-    {
-        return view('blog.post');
+        //
     }
 
     /**
@@ -53,15 +34,17 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(String $slug)
     {
-        //
+        $post = Post::where('slug', $slug)->firstOrFail();
+
+        return view('blog.post', compact('post'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Post $post)
     {
         //
     }
@@ -69,7 +52,7 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Post $post)
     {
         //
     }
@@ -77,7 +60,7 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Post $post)
     {
         //
     }
